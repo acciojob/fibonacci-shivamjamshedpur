@@ -1,11 +1,20 @@
-function fibonacci(num) {
+function fibonacci(n) {
 // your code here
-	
-	if (num===0||num===1) {
-		return 0;
-	} else {
-		return fibonacci(num-1)+fibonacci(num-2);
-	}
+	// Function to generate the Fibonacci series
+
+  // Base cases
+  if (n === 0 || n === 1) {
+    return n;
+  }
+
+  // Recursive case
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
+
+// Print the first 10 Fibonacci numbers
+for (let i = 0; i < 10; i++) {
+  console.log(fibonacci(i));
+}
+
 
 module.exports = fibonacci;
